@@ -1,0 +1,27 @@
+{
+  "users": {
+    "123321": {
+      "name": "123321",
+      "email": "poyno132@gmail.com",
+      "salt": "f64dc5aae25be86aa6882451697646dc",
+      "hash": "6bf1a1eac58ea0035db4dddf26851603388e33970be6ef5445fa15af7957ca216e9056967f5e26eb1f517a229d2290d25942cafd5d35450d3593b6d0a8cd6ced",
+      "coin": 0
+    },
+    "1233214": {
+      "name": "1233214",
+      "email": "poyno132@gmail.com",
+      "salt": "e4519300647deca2bf23234b01aef84e",
+      "hash": "fdbb35ea238a52ca2c677b1e0e0a44650101d720afa289af3b21cad35ac6ab0c772fd86df29f74dbf79e696ad4c3816a30f0d2d746164b68ed10f9ccced3c988",
+      "coin": 0
+    },
+    "poyno132": {
+      "name": "poyno132",
+      "email": "poyno132@gmail.com",
+      "salt": "86afab59292ee8aa347cf672f8160e38",
+      "hash": "94d2c83ea7d47d7f3528412b876bf0bac24bbb56a1b5d7e57124be1d2db8cfec273520ecc4d3ae425b98ba957b954ce60517c23c7e1c0b64f6de0386d647870c",
+      "coin": 0
+    }
+  },
+  "orders": {},
+  "deliveries": []
+}

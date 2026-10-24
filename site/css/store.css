@@ -1,0 +1,24 @@
+.pagehead{padding:56px 0 8px}.pagehead h1{font-size:clamp(1.9rem,4.5vw,3rem)}
+.status{border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9rem;color:var(--mute);margin:18px 0 0}
+.status.err{border-color:var(--amber);color:var(--amber)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 22px}
+.tabs button{font:600 .92rem Manrope,sans-serif;padding:10px 18px;border-radius:99px;border:1px solid var(--line);background:var(--bg2);color:var(--mute);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--cyan);color:var(--ink);border-color:var(--cyan)}
+.shop{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;padding-bottom:80px}
+.item{--c:var(--cyan);display:flex;flex-direction:column;gap:8px;padding:24px;border:1px solid var(--line);border-top:4px solid var(--c);border-radius:16px;background:var(--bg2)}
+.item h3{font-size:1.02rem;color:var(--c)}.item p{margin:0;color:var(--mute);font-size:.9rem;flex:1}
+.item .price{font:800 1.35rem Unbounded,sans-serif}.item .price small{font:500 .8rem Manrope,sans-serif;color:var(--mute)}
+.item .btn{margin-top:6px;width:100%}
+dialog{border:1px solid var(--line);border-radius:18px;background:var(--bg2);color:var(--text);padding:26px;width:min(420px,92vw)}
+dialog.wide{width:min(560px,96vw)}dialog::backdrop{background:rgba(2,4,12,.72)}
+dialog h3{font-size:1.2rem;margin-bottom:14px}
+dialog label{display:block;font-size:.88rem;color:var(--mute);margin:12px 0}
+dialog input{display:block;width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:500 1rem Manrope,sans-serif}
+dialog .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}dialog small{display:block;margin-top:14px;color:var(--mute)}
+dialog iframe{width:100%;height:560px;border:0;border-radius:10px;background:#fff}
+.seg{display:flex;gap:6px;background:var(--bg3);padding:4px;border-radius:10px}
+.seg button{flex:1;border:0;padding:9px;border-radius:7px;background:transparent;color:var(--mute);font:600 .9rem Manrope,sans-serif;cursor:pointer}
+.seg button.on{background:var(--cyan);color:var(--ink)}
+.err{color:var(--amber);min-height:1.4em;margin:6px 0 0;font-size:.88rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;pointer-events:none;background:var(--bg3);border:1px solid var(--cyan);padding:12px 18px;border-radius:10px;max-width:92vw;font-size:.92rem;transition:.25s;z-index:20}
+.toast.on{transform:translate(-50%,0);opacity:1}

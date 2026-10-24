@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mağaza | WardenMC</title>
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/store.css">
+</head>
+<body data-ip="play-wardenmc.duckdns.org">
+<header><div class="wrap">
+  <a class="logo" href="index.html"><img src="img/favicon.png" alt="" width="40" height="40"><span>Warden<b>MC</b></span></a>
+  <nav aria-label="Ana menü"><a href="index.html">Anasayfa</a><a href="magaza.html" aria-current="page">Mağaza</a><button class="btn" id="acct" type="button">Giriş yap</button></nav>
+</div></header>
+<main class="wrap">
+  <div class="pagehead"><h1>Mağaza</h1><p class="sub" style="margin-bottom:0">Coin yükle, sonra rütbe, kasa anahtarı ve özel setleri coin ile al.</p></div>
+  <div class="status" id="status">Güvenli ödeme PayTR üzerinden alınır. Kart bilgilerin bu sitede saklanmaz.</div>
+  <div class="tabs" id="tabs" role="tablist" aria-label="Mağaza kategorileri"></div>
+  <div class="shop" id="items"></div>
+  <noscript><p>Mağazayı görmek için JavaScript'i etkinleştir.</p></noscript>
+</main>
+
+<dialog id="authDlg" aria-labelledby="authTitle"><form id="authForm" novalidate>
+  <h3 id="authTitle">Giriş yap</h3>
+  <div class="seg"><button type="button" id="modeLogin" class="on">Giriş yap</button><button type="button" id="modeReg">Kayıt ol</button></div>
+  <label>Minecraft kullanıcı adı<input id="fName" autocomplete="username" maxlength="16"></label>
+  <label id="mailRow" hidden>E-posta<input id="fMail" type="email" autocomplete="email"></label>
+  <label>Şifre<input id="fPass" type="password" autocomplete="current-password" placeholder="En az 6 karakter"></label>
+  <p class="err" id="authErr" role="alert"></p>
+  <div class="row"><button class="btn" id="authGo" type="submit">Giriş yap</button><button class="btn ghost" type="button" id="authX">Vazgeç</button></div>
+</form></dialog>
+<dialog id="acctDlg" aria-labelledby="acctName"><h3 id="acctName"></h3><p id="acctCoin"></p>
+  <div class="row"><button class="btn ghost" type="button" id="logout">Çıkış yap</button><button class="btn" type="button" id="acctClose">Kapat</button></div></dialog>
+<dialog id="payDlg" aria-labelledby="payTitle"><form id="payForm">
+  <h3 id="payTitle">Ödeme bilgileri</h3>
+  <label>Ad soyad<input id="pName" autocomplete="name" required></label>
+  <label>Telefon<input id="pPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xx xxx xx xx" required></label>
+  <p class="err" id="payErr" role="alert"></p>
+  <div class="row"><button class="btn amber" type="submit">Ödemeye geç</button><button class="btn ghost" type="button" id="payX">Vazgeç</button></div>
+  <small>Ödeme PayTR güvenli ödeme sayfasında tamamlanır.</small>
+</form></dialog>
+<dialog id="frameDlg" class="wide" aria-label="Güvenli ödeme"><iframe id="payFrame" title="PayTR güvenli ödeme" src="about:blank"></iframe>
+  <div class="row"><button class="btn ghost" type="button" id="frameX">Kapat</button></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<footer><div class="wrap">
+  <span>© 2026 WardenMC. Mojang veya Microsoft ile bağlantılı değildir.</span>
+  <nav aria-label="Alt menü"><a href="#">Gizlilik</a><a href="#">Mesafeli satış sözleşmesi</a><a href="#">İade ve iptal</a></nav>
+</div></footer>
+<script src="js/store.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Yönetim | WardenMC</title>
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<section id="login" class="login" hidden>
+  <form id="loginForm" novalidate>
+    <h1>Warden<b>MC</b> yönetim</h1>
+    <label>Kullanıcı adı<input id="lUser" autocomplete="username" required></label>
+    <label>Şifre<input id="lPass" type="password" autocomplete="current-password" required></label>
+    <p class="err" id="lErr" role="alert"></p>
+    <button class="btn" type="submit">Giriş yap</button>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <header class="top">
+    <strong class="brand">Warden<b>MC</b> yönetim</strong>
+    <nav id="tabs" role="tablist" aria-label="Yönetim bölümleri">
+      <button role="tab" data-tab="stats" aria-selected="true">Özet</button>
+      <button role="tab" data-tab="users" aria-selected="false">Oyuncular</button>
+      <button role="tab" data-tab="orders" aria-selected="false">Siparişler</button>
+      <button role="tab" data-tab="deliveries" aria-selected="false">Teslimatlar</button>
+      <button role="tab" data-tab="products" aria-selected="false">Ürünler</button>
+    </nav>
+    <button class="btn ghost" id="logout" type="button">Çıkış yap</button>
+  </header>
+  <main id="view"></main>
+</div>
+
+<dialog id="coinDlg" aria-labelledby="coinTitle"><form id="coinForm">
+  <h3 id="coinTitle"></h3>
+  <label>Miktar (çıkarmak için eksi yaz)<input id="cAmt" type="number" step="1" required></label>
+  <label>Sebep<input id="cWhy" maxlength="120" required></label>
+  <p class="err" id="cErr" role="alert"></p>
+  <div class="row"><button class="btn" type="submit">Uygula</button><button class="btn ghost" type="button" data-close>Vazgeç</button></div>
+</form></dialog>
+
+<dialog id="giveDlg" aria-labelledby="giveTitle"><form id="giveForm">
+  <h3 id="giveTitle"></h3>
+  <label>Ürün<select id="gItem" style="background:#091412;border:1px solid var(--line);border-radius:8px;padding:.55em .75em;color:var(--ink);width:100%"></select></label>
+  <label>Not (isteğe bağlı)<input id="gWhy" maxlength="80"></label>
+  <p class="err" id="gErr" role="alert"></p>
+  <div class="row"><button class="btn" type="submit">Ver</button><button class="btn ghost" type="button" data-close>Vazgeç</button></div>
+</form></dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="js/admin.js"></script>
+</body>
+</html>
